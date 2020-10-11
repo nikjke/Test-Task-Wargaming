@@ -1,0 +1,806 @@
+html {
+    font-size: 13px;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.page {
+    width: 100%;
+
+    background: #000 url("../img/bg.jpg") center no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.header__common-menu-container {
+    display: flex;
+    align-items: center;
+    height: 37px;
+    background-color: #050505;
+}
+
+.header__logo-wargaming {
+    margin-top: 4px;
+    margin-left: 10px;
+    opacity: 0.6;
+}
+
+.header__logo:hover {
+    opacity: 1;
+}
+
+.header__common-menu {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+    list-style: none;
+}
+
+.header__cm-item > * {
+    color: #fff;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.header__cm-item > a:hover {
+    opacity: 0.9;
+}
+
+.header__item-games {
+    position: relative;
+    margin-left: 0px;
+}
+
+.header__item-games-arrow--bottom,
+.header__item-services-arrow--bottom {
+    border: solid #fff;
+    opacity: 0.6;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.header__item-games-arrow--bottom {
+    position: absolute;
+    top: 6px;
+    right: -15px;
+}
+
+.header__item-services {
+    margin-left: 30px;
+    position: relative;
+}
+
+.header__item-services-arrow--bottom {
+    position: absolute;
+    top: 6px;
+    right: -15px;
+}
+
+.header__item-shop {
+    margin-left: 30px;
+}
+
+.header__item-shop a {
+    color: #ffbe4c;
+}
+
+.header__item-support {
+    margin-left: 20px;
+}
+
+.header__item-login {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.header__item-login span {
+    opacity: 0.4;
+}
+
+.header__main-menu-container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background: #333;
+}
+
+.header__logo-warships {
+    min-width: 40px;
+    height: 44px;
+    margin-left: 16px;
+    background: #333 url("../img/warships-logo.png") no-repeat;
+    background-size: contain;
+}
+
+.header__main-menu {
+    display: flex;
+    height: 100%;
+}
+
+.header__mm-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 28px;
+    font-size: 1.1rem;
+    font-family: RobotoCondensed, sans-serif;
+    color: #fff;
+    opacity: 0.77;
+    text-decoration: none;
+}
+
+.header__mm-item--active:after,
+.header__main-menu a:hover:after {
+    content: "";
+    border-bottom: 3px solid #0cc;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+}
+
+.header__main-menu a:hover:last-child:after {
+    border-bottom: none;
+}
+
+.header__main-menu a:hover,
+.header__main-menu .header__mm-item--active {
+    opacity: 1;
+}
+
+.header__mm-item-recruiting {
+    width: 172px;
+}
+
+.header__mm-item-recruiting-open-new-tab,
+.header__mm-item-forum-open-new-tab {
+    position: absolute;
+    top: 23px;
+    right: 0px;
+    width: 12px;
+    height: 12px;
+    background-image: url("../img/open-new-tab.png");
+}
+
+.header__mm-item-forum-open-new-tab {
+    right: -20px;
+}
+
+.header__mm-item-search {
+    margin-left: 225px;
+    margin-right: 20px;
+    -webkit-margin-left: 225px;
+    -webkit-margin-right: 20px;
+}
+
+.header__mm-item-search:hover {
+    opacity: 1;
+}
+
+.header__mm-item-search img {
+    width: 20px;
+    height: 20px;
+    opacity: .2;
+}
+
+.header__play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 160px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: 16px;
+    background-image: linear-gradient(0deg,#e12e00 0,#fd6200);
+}
+
+.header__play a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.header__play:hover {
+    background-size: 100% 400%;
+}
+
+
+/* Main */
+
+.content {
+    margin-top: 97px;
+}
+
+.content__header {
+    background: url("../img/sailor.jpg");
+    background-position: center 0;
+    background-size: cover;
+    height: 835px;
+}
+
+.content__title {
+    display: inline-block;
+    font-family: RobotoCondensed, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+
+    margin-top: 50px;
+    margin-left: 32px;
+}
+
+.content__navigation {
+    width: 250px;
+    height: 184px;
+    margin-top: 20px;
+    margin-left: 32px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.content__list {
+    padding: 34px 20px;
+}
+
+.content__list > li {
+    margin-bottom: 4px;
+    padding-left: 23px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: #00c0c0;
+}
+
+.content__list > li:hover {
+    text-decoration: underline;
+}
+
+.content__list > li:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    margin: 0 8px 2px -15px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #0cc;
+    border-radius: 50%;
+    background: #0cc;
+}
+
+.content__chapter-navigation {
+    max-width: 758px;
+    //position: relative;
+    //top: -370px;
+    margin-left: 32px;
+    margin-top: -370px;
+}
+
+.content__subtitle-navigation {
+    margin-bottom: 11px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.content__text-navigation {
+    margin-bottom: 11px;
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: #ccc;
+}
+
+.content__text-navigation span {
+    color: rgb(255, 255, 255);
+}
+
+.content__img-wasd {
+    width: 50%;
+    margin: 50px 0;
+}
+
+.content__explanation {
+    display: inline-block;
+    width: 49%;
+    padding-left: 37px;
+    margin-bottom: 20px;
+}
+
+.content__explanation p {
+    display: flex;
+    margin: 0;
+}
+
+.content__explanation img {
+    margin-right: 15px;
+}
+
+.content__explanation span {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.content__info {
+    margin: 20px 0;
+}
+
+.content__info p {
+    display: inline-block;
+    vertical-align: top;
+    width: 76%;
+    padding: 16px;
+    
+    font-size: 1.2rem;
+    color: #79c5c5;
+    border-left: 5px solid transparent;
+    background-color: hsla(0,0%,100%,.08);
+    border-color: #3cc;
+}
+
+.content__navigation-rudder-text {
+    margin-bottom: 11px;
+    color: #ccc;
+    font-size: 1.2rem;
+    line-height: 25px;
+}
+
+.content__navigation-rudder-text span {
+    color: rgb(255, 255, 255);
+}
+
+.content__rudder {
+    margin: 40px 0;
+}
+
+.content__rudder > img {
+    width: 60%;
+}
+
+.content__ruder-words {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+}
+
+.content__ruder-words p {
+    display: flex;
+}
+
+.content__ruder-words span {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.content__navigation-iframe {
+    width: 100%;
+}
+
+.content__chapter-naval {
+    //position: relative;
+    //top: -330px;
+    max-width: 758px;
+    margin-left: 32px;
+}
+
+.content__subtitle-naval {
+    margin-bottom: 11px;
+    color: #fff;
+    font-family: RobotoCondensed, sans-serif;
+    font-weight: 500;
+    font-size: 2.6rem;
+}
+
+.content__chapter-naval p {
+    margin-bottom: 11px;
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: #ccc;
+}
+
+.content__chapter-naval ul {
+    margin-bottom: 40px;
+    padding-left: 23px;
+    color: #ccc;
+    line-height: 25px;
+    font-size: 1.2rem;
+}
+
+.content__chapter-naval ul > li:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    margin: 0 8px 2px -15px;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #0cc;
+    border-radius: 50%;
+    background: #0cc;
+}
+
+.content__subtitle-firing {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.content__naval-mouse {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.content__naval-mouse p {
+    position: relative;
+    width: 49%;
+    height: 110px;
+    margin-top: 20px;
+
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: #ccc;
+}
+
+.content__naval-mouse p strong {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+.content__naval-mouse p span {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+}
+
+.content__naval-aiming h3 {
+    margin-top: 20px;
+    margin-bottom: 11px;
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.content__naval-aiming ul {
+    margin: 20px 0;
+}
+
+.content__naval-aiming span {
+    color: rgb(255, 255, 255);
+}
+
+.content__naval-battery {
+    margin: 40px 0;
+}
+
+.content__naval-battery h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.content__naval-battery-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__naval-battery-container div {
+    width: 16%;
+    text-align: center;
+}
+
+.content__naval-battery-container img {
+    width: 65px;
+    margin: 15px 0;
+}
+
+.content__naval-battery-container span {
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: #ccc;
+}
+
+.content__naval-firing iframe {
+    width: 100%;
+}
+
+.content__chapter-torpedoes {
+    max-width: 758px;
+    //position: relative;
+    //top: -320px;
+    margin-left: 32px;
+}
+
+.content__chapter-torpedoes h2 {
+    margin: 11px 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.6rem;
+}
+
+.content__chapter-torpedoes p {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: #ccc;
+}
+
+.content__chapter-torpedoes span {
+    color: rgb(255, 255, 255);
+}
+
+.content__torpedoes-using h3 {
+    margin: 20px 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.2rem;
+}
+
+.content__torpedoes-using-container-text {
+    display: inline-block;
+    width: 49%;
+}
+
+.content__torpedoes-using-container-text p {
+    margin-bottom: 11px;
+}
+
+.content__torpedoes-using-container-text p img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.content__torpedoes-using-container-text p span {
+    color: rgb(255, 255, 255);
+}
+
+.content__torpedoes-using-container-img {
+    display: inline-block;
+    width: 49%;
+    margin-left: 5px;
+    position: relative;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.content__torpedoes-using-container-img p {
+    position: absolute;
+}
+
+.content__torpedoes-using-signature-one {
+    top: 0px;
+    left: 250px;
+}
+
+.content__torpedoes-using-signature-two {
+    top: 140px;
+    left: 250px;
+}
+
+.content__torpedoes-using-three-img {
+    position: relative;
+}
+
+.content__torpedoes-using-three-img img {
+    display: inline-block;
+    width: 33%;
+    margin: 20px 0;
+}
+
+.content__torpedoes-using-three-img p {
+    position: absolute;
+    top: 65px;
+}
+
+.content__torpedoes-using-three-img p:nth-child(4) {
+    left: 55px;
+}
+
+.content__torpedoes-using-three-img p:nth-child(5) {
+    left: 330px;
+}
+
+.content__torpedoes-using-three-img p:nth-child(6) {
+    left: 590px;
+}
+
+.content__torpedoes-using-press-x img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.content__torpedoes-using-click-to-launch > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.content__torpedoes-using-click-to-launch-container {
+    margin-left: 20px;
+}
+
+.content__torpedoes-using-click-to-launch-container strong {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.content__torpedoes-using-click-to-launch-container span {
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: #ccc;
+}
+
+.content__torpedoes-using-ship-launch {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.content__chapter-torpedoes iframe {
+    width: 100%;
+}
+
+.content__pagination-list {
+    //position: relative;
+    //top: -300px;
+    max-width: 758px;
+    margin-left: 32px;
+}
+
+.content__pagination-list li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 16px;
+}
+
+.content__scroll-up {
+    height: 64px;
+    width: 64px;
+    position: fixed;
+    right: 60px;
+    bottom: 10%;
+    align-items: center;
+    z-index: 2;
+    background-color: rgba(0,0,0,.29);
+}
+
+.content__scroll-up:before {
+    content: "";
+    background: url("../img/arrow-up.png") top no-repeat;
+    background-size: 100% auto;
+}
+
+
+/* Footer */
+
+.footer {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+    background-color: #333;
+}
+
+.footer__container {
+    margin-left: 32px;
+    margin-right: 16px;
+}
+
+.footer__first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__social-network-list {
+    display: inline-block;
+}
+
+.footer__social-network-list li:first-child {
+    margin-right: 50px;
+    position: relative;
+}
+
+.footer__social-network-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer__social-network-list .world-map-arrow--top {
+    position: absolute;
+    top: 7px;
+    left: 63px;
+    border: solid #fff;
+    opacity: 0.6;
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+    transform: rotate(224deg);
+}
+
+.footer__social-network-list svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    fill: #d3d3d3;
+    background-size: cover;
+}
+
+.footer__social-network-list img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.footer__social-network-list .world-map {
+    width: 100%;
+}
+
+.footer__brands-list {
+    display: inline-block;
+}
+
+.footer__brands-list li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 0 0 40px;
+}
+
+.footer__second-row {
+    text-align: center;
+}
+
+.footer__second-row li {
+    display: inline-block;
+    margin: 10px;
+    color: #feffff;
+    font-size: 1.2rem;
+}
+
+.footer__second-row p {
+    color: #eee;
+    font-size: 1.2rem;
+    opacity: .54;
+}
+
+.footer__third-row {
+    font-size: 1.1rem;
+    color: #feffff;
+    opacity: .54;
+}
